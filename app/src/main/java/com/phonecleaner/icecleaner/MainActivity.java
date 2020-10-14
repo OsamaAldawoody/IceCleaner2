@@ -27,7 +27,6 @@ import com.phonecleaner.icecleaner.fragments.BoostResultFragment;
 import com.phonecleaner.icecleaner.fragments.CleanResultFragment;
 import com.phonecleaner.icecleaner.fragments.HomeFragment;
 import com.phonecleaner.icecleaner.fragments.SettingFragment;
-import com.phonecleaner.icecleaner.service.CleanNotification;
 import com.phonecleaner.icecleaner.utils.KeyboardUtil;
 import com.phonecleaner.icecleaner.utils.Utils;
 
@@ -239,7 +238,6 @@ public class MainActivity extends AppCompatActivity implements BaseFragment.OnBa
     @Override
     protected void onStart() {
         super.onStart();
-        startService(new Intent(getApplicationContext(), CleanNotification.class));
-        Log.v("MainActivity", "started");
+
     }
 }
