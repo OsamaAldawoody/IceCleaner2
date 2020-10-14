@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.phonecleaner.icecleaner">
 
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.GET_PACKAGE_SIZE" />
     <uses-permission android:name="android.permission.CLEAR_APP_CACHE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -72,6 +74,9 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/widget_provider" />
         </receiver>
+
+        <receiver android:process=":remote" android:name=".receiver.Alarm"/>
+
         <receiver
             android:name="com.phonecleaner.icecleaner.wiget.MyWidgetIntentReceiver"
             android:label="@string/app_name">
